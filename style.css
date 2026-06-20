@@ -35,32 +35,38 @@ img{max-width:100%;display:block}
   padding:11px 18px;text-transform:none!important;font-weight:700!important;letter-spacing:.02em!important;
 }
 .nav-toggle{display:none;background:transparent;border:0;font-size:1.7rem;color:var(--brown)}
-.walking-paws{position:fixed;z-index:0;pointer-events:none;top:120px;bottom:80px;width:88px;opacity:.0}
-.left-walk{left:12px}.right-walk{right:12px}
-.walking-paws span{
-  position:absolute;font-size:1.12rem;opacity:0;color:var(--brown);
-  animation:walkPaw 9s linear infinite;
+.paw-field{
+  position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;
 }
-.left-walk span:nth-child(1){left:14px;top:0;animation-delay:0s}
-.left-walk span:nth-child(2){left:38px;top:15%;animation-delay:1.2s}
-.left-walk span:nth-child(3){left:20px;top:30%;animation-delay:2.4s}
-.left-walk span:nth-child(4){left:44px;top:45%;animation-delay:3.6s}
-.left-walk span:nth-child(5){left:18px;top:60%;animation-delay:4.8s}
-.left-walk span:nth-child(6){left:40px;top:75%;animation-delay:6s}
-.left-walk span:nth-child(7){left:24px;top:90%;animation-delay:7.2s}
-.right-walk span:nth-child(1){right:16px;top:5%;animation-delay:.6s}
-.right-walk span:nth-child(2){right:42px;top:20%;animation-delay:1.8s}
-.right-walk span:nth-child(3){right:20px;top:35%;animation-delay:3s}
-.right-walk span:nth-child(4){right:46px;top:50%;animation-delay:4.2s}
-.right-walk span:nth-child(5){right:22px;top:65%;animation-delay:5.4s}
-.right-walk span:nth-child(6){right:42px;top:80%;animation-delay:6.6s}
-.right-walk span:nth-child(7){right:24px;top:95%;animation-delay:7.8s}
-@keyframes walkPaw{
-  0%{opacity:0;transform:translateY(18px) rotate(-16deg) scale(.88)}
-  12%{opacity:.18}
-  36%{opacity:.18}
-  58%{opacity:0;transform:translateY(-24px) rotate(14deg) scale(1)}
-  100%{opacity:0;transform:translateY(-24px) rotate(14deg) scale(1)}
+.paw-field span{
+  position:absolute;font-size:.92rem;opacity:0;
+  animation:walkingFade 8.5s ease-in-out infinite;
+  filter:saturate(.8);
+}
+.paw-field span:nth-child(1){left:3%;top:12%;animation-delay:.1s;transform:rotate(-16deg)}
+.paw-field span:nth-child(2){left:5%;top:18%;animation-delay:.9s;transform:rotate(14deg)}
+.paw-field span:nth-child(3){left:2%;top:31%;animation-delay:1.7s;transform:rotate(-9deg)}
+.paw-field span:nth-child(4){left:6%;top:39%;animation-delay:2.5s;transform:rotate(18deg)}
+.paw-field span:nth-child(5){left:3%;top:58%;animation-delay:3.3s;transform:rotate(-14deg)}
+.paw-field span:nth-child(6){left:7%;top:72%;animation-delay:4.1s;transform:rotate(10deg)}
+.paw-field span:nth-child(7){left:4%;top:88%;animation-delay:4.9s;transform:rotate(-18deg)}
+.paw-field span:nth-child(8){right:4%;top:10%;animation-delay:.5s;transform:rotate(15deg)}
+.paw-field span:nth-child(9){right:2%;top:23%;animation-delay:1.3s;transform:rotate(-12deg)}
+.paw-field span:nth-child(10){right:6%;top:36%;animation-delay:2.1s;transform:rotate(17deg)}
+.paw-field span:nth-child(11){right:3%;top:49%;animation-delay:2.9s;transform:rotate(-10deg)}
+.paw-field span:nth-child(12){right:7%;top:61%;animation-delay:3.7s;transform:rotate(12deg)}
+.paw-field span:nth-child(13){right:2%;top:76%;animation-delay:4.5s;transform:rotate(-15deg)}
+.paw-field span:nth-child(14){right:5%;top:91%;animation-delay:5.3s;transform:rotate(18deg)}
+.paw-field span:nth-child(15){left:12%;top:48%;animation-delay:6.1s;transform:rotate(9deg)}
+.paw-field span:nth-child(16){right:13%;top:68%;animation-delay:6.9s;transform:rotate(-9deg)}
+.paw-field span:nth-child(17){left:14%;top:82%;animation-delay:7.7s;transform:rotate(14deg)}
+.paw-field span:nth-child(18){right:15%;top:18%;animation-delay:8.5s;transform:rotate(-14deg)}
+@keyframes walkingFade{
+  0%{opacity:0;translate:0 18px;scale:.85}
+  16%{opacity:.18}
+  38%{opacity:.18}
+  64%{opacity:0;translate:0 -22px;scale:1}
+  100%{opacity:0;translate:0 -22px;scale:1}
 }
 main,header,footer{position:relative;z-index:1}
 .hero{
@@ -206,7 +212,6 @@ footer img{width:142px;margin:0 auto 10px;background:transparent!important}foote
   .service-grid{grid-template-columns:repeat(2,1fr)}
   .polaroid-grid{grid-template-columns:repeat(3,1fr)}
   .memorial-card{grid-template-columns:1fr}
-  .walking-paws{display:none}
 }
 @media(max-width:720px){
   .site-header{height:auto}.brand img{width:108px}.nav-toggle{display:block}
