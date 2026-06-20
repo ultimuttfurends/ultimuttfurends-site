@@ -7,10 +7,17 @@
   <meta name="description" content="Personalized pet care built on trust, connection, and genuine love for every pet. Serving North Scottsdale." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:wght@600;700&family=Quicksand:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="side-paws left-paws" aria-hidden="true">
+    <span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span>
+  </div>
+  <div class="side-paws right-paws" aria-hidden="true">
+    <span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span>
+  </div>
+
   <header class="site-header">
     <a href="#top" class="brand" aria-label="UltiMutt Furends home">
       <img src="assets/logo.png" alt="UltiMutt Furends logo">
@@ -31,6 +38,7 @@
       <div class="hero-copy reveal">
         <p class="eyebrow">North Scottsdale Pet Care</p>
         <h1>Care Beyond Measure</h1>
+        <div class="mini-divider"><span></span><b>♡</b><span></span></div>
         <p class="hero-subtitle">Personalized care built on trust, connection, and genuine love for every pet I meet.</p>
         <div class="hero-buttons">
           <a class="btn primary" href="#booking">Request a Booking</a>
@@ -44,16 +52,54 @@
 
     <section class="soft-marquee" aria-label="Client highlights">
       <div class="soft-marquee-track">
-        <span>Trusted care</span>
-        <span>Daily updates</span>
-        <span>Personalized routines</span>
-        <span>North Scottsdale</span>
-        <span>Peace of mind</span>
-        <span>Happy pets</span>
-        <span>Trusted care</span>
-        <span>Daily updates</span>
-        <span>Personalized routines</span>
-        <span>North Scottsdale</span>
+        <span>Care Beyond Measure</span>
+        <span>North Scottsdale Pet Care</span>
+        <span>Daily Photo Updates</span>
+        <span>Thoughtful In-Home Care</span>
+        <span>Peace of Mind While Away</span>
+        <span>Your Pet’s New Best Friend</span>
+        <span>Care Beyond Measure</span>
+        <span>North Scottsdale Pet Care</span>
+        <span>Daily Photo Updates</span>
+        <span>Thoughtful In-Home Care</span>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Services</p>
+        <h2>Services at a glance.</h2>
+        <p>Thoughtful care designed around your pet’s comfort, routine, and happiness.</p>
+      </div>
+      <div class="service-grid">
+        <button class="service-card reveal" type="button" data-service="overnight">
+          <span class="service-icon">☾</span>
+          <h3>Overnight Pet Care</h3>
+          <p>Comfortable in-home care while you’re away.</p>
+          <small>Learn more →</small>
+        </button>
+        <button class="service-card reveal" type="button" data-service="constant">
+          <span class="service-icon">♡</span>
+          <h3>24/7 Constant Care</h3>
+          <p>Extra attentive care for pets who need more support.</p>
+          <small>Learn more →</small>
+        </button>
+        <button class="service-card reveal" type="button" data-service="dropin">
+          <span class="service-icon">⌂</span>
+          <h3>Drop-In Visits</h3>
+          <p>Feeding, potty breaks, playtime, and love.</p>
+          <small>Learn more →</small>
+        </button>
+        <button class="service-card reveal" type="button" data-service="special">
+          <span class="service-icon">✦</span>
+          <h3>Special Needs Care</h3>
+          <p>Support for puppies, seniors, anxiety, and medications.</p>
+          <small>Learn more →</small>
+        </button>
+      </div>
+      <div class="service-detail reveal" id="serviceDetail">
+        <h3>Choose a service card above.</h3>
+        <p>Details will appear here so visitors can explore without leaving the page.</p>
       </div>
     </section>
 
@@ -71,59 +117,29 @@
       </div>
     </section>
 
-    <section class="section services" id="services">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Services</p>
-        <h2>Thoughtful care for every routine.</h2>
-        <p>Final pricing can be updated later. This section is built to stay clean, polished, and easy to scan.</p>
-      </div>
-      <div class="service-grid">
-        <article class="service-card reveal">
-          <h3>Overnight Pet Care</h3>
-          <p>In-home care that keeps your pet comfortable, loved, and on their normal routine while you’re away.</p>
-        </article>
-        <article class="service-card reveal">
-          <h3>24/7 Constant Care</h3>
-          <p>Extra attentive care for pets who need consistent companionship, supervision, or specialized support.</p>
-        </article>
-        <article class="service-card reveal">
-          <h3>Drop-In Visits</h3>
-          <p>Potty breaks, feeding, playtime, medications, fresh water, and plenty of attention.</p>
-        </article>
-        <article class="service-card reveal">
-          <h3>Special Needs Care</h3>
-          <p>Comfortable support for seniors, puppies, anxiety, mobility needs, medications, and more.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section service-area">
-      <div class="area-card reveal">
-        <p class="eyebrow">Service Area</p>
-        <h2>Serving North Scottsdale</h2>
-        <p>UltiMutt Furends proudly serves North Scottsdale, Carefree, Cave Creek, and surrounding neighborhoods within my service area.</p>
-        <p>Not sure if you’re within range? Submit your service address through the booking form and I’ll confirm availability within 24 hours. Areas outside my standard service area may be considered on a case-by-case basis and may require an additional travel fee.</p>
-      </div>
-    </section>
-
     <section class="section gallery-section" id="gallery">
       <div class="section-heading reveal">
-        <p class="eyebrow">Pet Pals</p>
-        <h2>Some of my favorite furends.</h2>
+        <p class="eyebrow">Happy Furends</p>
+        <h2>Pet pals over the years.</h2>
       </div>
-      <div class="gallery-grid">
-        <figure class="gallery-card reveal"><img src="assets/ally.jpg" alt="Ally"><figcaption>Ally</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/bailey.jpg" alt="Bailey"><figcaption>Bailey</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/boone.jpg" alt="Boone"><figcaption>Boone</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/brody.jpg" alt="Brody"><figcaption>Brody</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/cassidy.jpg" alt="Cassidy"><figcaption>Cassidy</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/charlie.jpg" alt="Charlie"><figcaption>Charlie</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/cooper.jpg" alt="Cooper"><figcaption>Cooper</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/dash.jpg" alt="Dash"><figcaption>Dash</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/emma.jpg" alt="Emma"><figcaption>Emma</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/finn.jpg" alt="Finn"><figcaption>Finn</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/london.jpg" alt="London"><figcaption>London</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="assets/toby-jack.jpg" alt="Toby Jack"><figcaption>Toby Jack</figcaption></figure>
+      <div class="polaroid-grid">
+        <figure class="polaroid reveal"><img src="assets/ally.jpg" alt="Ally"><figcaption>Ally</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/bailey.jpg" alt="Bailey"><figcaption>Bailey</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/boone.jpg" alt="Boone"><figcaption>Boone</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/brody.jpg" alt="Brody"><figcaption>Brody</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/cassidy.jpg" alt="Cassidy"><figcaption>Cassidy</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/charlie.jpg" alt="Charlie"><figcaption>Charlie</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/cooper.jpg" alt="Cooper"><figcaption>Cooper</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/dash.jpg" alt="Dash"><figcaption>Dash</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/emma.jpg" alt="Emma"><figcaption>Emma</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/finn.jpg" alt="Finn"><figcaption>Finn</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/jessie.jpg" alt="Jessie"><figcaption>Jessie</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/kodak.jpg" alt="Kodak"><figcaption>Kodak</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/leia.jpg" alt="Leia"><figcaption>Leia</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/london.jpg" alt="London"><figcaption>London</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/max.jpg" alt="Max"><figcaption>Max</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/rocky.jpg" alt="Rocky"><figcaption>Rocky</figcaption></figure>
+        <figure class="polaroid reveal"><img src="assets/toby-jack.jpg" alt="Toby Jack"><figcaption>Toby Jack</figcaption></figure>
       </div>
     </section>
 
@@ -159,6 +175,17 @@
           <strong>— Kendra, Dog Mom to Ally & Dash</strong>
         </div>
         <button class="slide-btn next" aria-label="Next testimonial">›</button>
+      </div>
+    </section>
+
+    <section class="service-area-compact">
+      <div class="area-inner reveal">
+        <div>
+          <p class="eyebrow">Service Area</p>
+          <h2>Serving North Scottsdale</h2>
+          <p>Carefree, Cave Creek, and surrounding neighborhoods within my standard service area. Not sure if you’re within range? Submit your address and I’ll confirm availability within 24 hours.</p>
+        </div>
+        <a class="btn secondary" href="#booking">Check My Address</a>
       </div>
     </section>
 
@@ -205,49 +232,40 @@
       </div>
     </section>
 
-    <section class="section booking-section" id="booking">
+    <section class="booking-strip" id="booking">
       <div class="booking-card reveal">
         <div class="booking-intro">
           <p class="eyebrow">Request a Booking</p>
           <h2>Let’s meet your furend.</h2>
-          <p>Tell me a little about your pet, requested dates, and care needs. I’ll review your request, confirm service area availability, and respond within 24 hours.</p>
+          <p>Tell me the basics and I’ll review your request, confirm service area availability, and respond within 24 hours.</p>
         </div>
         <form action="https://formspree.io/f/your-form-id" method="POST" class="booking-form">
           <div class="form-row">
-            <label>Full Name*<input name="full_name" required></label>
-            <label>Email Address*<input type="email" name="email" required></label>
+            <label>Name*<input name="full_name" required></label>
+            <label>Email*<input type="email" name="email" required></label>
           </div>
-          <label>Service Address*<input name="service_address" required placeholder="Street address, city, ZIP"></label>
           <div class="form-row">
-            <label>Phone Number*<input name="phone" required></label>
-            <label>Pet Name(s)*<input name="pet_names" required></label>
+            <label>Phone<input name="phone"></label>
+            <label>Service Address*<input name="service_address" required></label>
           </div>
-          <div class="form-row compact-row">
-            <label>Breed(s)<input name="breeds"></label>
-            <label>Pet Age(s)<input name="pet_ages"></label>
-            <label>How Many Pets?*<input name="number_of_pets" required></label>
+          <div class="form-row">
+            <label>Pet Name(s)<input name="pet_names"></label>
+            <label>Service Requested*
+              <select name="service_requested" required>
+                <option value="">Select a service</option>
+                <option>Overnight Pet Care</option>
+                <option>24/7 Constant Care</option>
+                <option>60 Minute Drop-In</option>
+                <option>30 Minute Drop-In</option>
+                <option>Other / Not Sure Yet</option>
+              </select>
+            </label>
           </div>
-          <label>Service Requested*
-            <select name="service_requested" required>
-              <option value="">Select a service</option>
-              <option>Overnight Pet Care</option>
-              <option>24/7 Constant Care</option>
-              <option>60 Minute Drop-In</option>
-              <option>30 Minute Drop-In</option>
-              <option>Other / Not Sure Yet</option>
-            </select>
-          </label>
           <div class="form-row">
             <label>Requested Dates*<input name="requested_dates" required placeholder="Example: July 1–5"></label>
-            <label>Preferred Meet & Greet Time<input name="meet_greet_time" placeholder="Optional"></label>
+            <label>How Many Pets?<input name="number_of_pets"></label>
           </div>
-          <label>Has Deepa cared for your pet before?
-            <select name="returning_client">
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </label>
-          <label>Special Care Notes<textarea name="special_care_notes" rows="5" placeholder="Medications, feeding instructions, mobility needs, puppy care, routines, or anything else you'd like me to know."></textarea></label>
+          <label>Special Care Notes<textarea name="special_care_notes" rows="3" placeholder="Medications, feeding instructions, routines, or anything else you'd like me to know."></textarea></label>
           <button class="btn primary" type="submit">Submit Request</button>
           <p class="form-note">Form setup note: replace the Formspree URL with your own free Formspree endpoint before launch.</p>
         </form>
