@@ -30,3 +30,31 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
+
+
+const bookingForm = document.getElementById('booking-form');
+bookingForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(bookingForm);
+
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    });
+
+    if (!response.ok) {
+      throw new Error('Form submission failed');
+    }
+
+    bookingForm.reset();
+
+    const successMessage = document.getElementById('form-success');
+    successMessage?.classList.add('show');
+    successMessage?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  } catch (error) {
+    alert('Something went wrong. Please try again.');
+  }
+});

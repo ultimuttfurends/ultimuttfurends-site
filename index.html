@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./style.css?v=16" />
 </head>
 <body>
-  <!-- ULTIMUTT_V17_FORM_SUCCESS -->
+  <!-- ULTIMUTT_V18_INLINE_FORM -->
   <div class="paw-field" aria-hidden="true">
     <span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span>
     <span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span>
@@ -245,9 +245,9 @@
         <div class="booking-intro">
           <p class="eyebrow">Request a Booking</p>
           <h2>Let’s meet your furend.</h2>
-          <p>Tell me the basics and I’ll review your request, confirm service area availability, and respond within 24 hours.</p>
+          <p>Please fill out this form and I’ll be in touch soon to discuss your pup’s needs, answer any questions, and confirm availability.</p>
         </div>
-        <form name="booking-request" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="booking-form">
+        <form id="booking-form" name="booking-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="booking-form">
           <input type="hidden" name="form-name" value="booking-request">
           <p class="hidden" style="display:none;">
             <label>Don’t fill this out: <input name="bot-field"></label>
@@ -281,13 +281,18 @@
           <button class="btn primary" type="submit">Submit Request</button>
           <p class="form-note">Form setup note: replace the Formspree URL with your own free Formspree endpoint before launch.</p>
         </form>
+        <div id="form-success" class="form-success-message" aria-live="polite">
+          <div class="success-icon">🐾</div>
+          <h3>Thanks, Furend!</h3>
+          <p>Your booking request has been received. I’ll be in touch soon to discuss your pup’s needs and confirm availability.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <img src="./assets/logo.png" alt="UltiMutt Furends logo">
-    <p>© <span id="year"></span> UltiMutt Furends · Care Beyond Measure</p><p class="version-marker">Site version: V17 form success</p>
+    <p>© <span id="year"></span> UltiMutt Furends · Care Beyond Measure</p><p class="version-marker">Site version: V18 inline form</p>
   </footer>
 
   <script src="./script.js?v=16"></script>
