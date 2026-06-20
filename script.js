@@ -30,24 +30,3 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
-
-
-
-hiddenFrame?.addEventListener('load', () => {
-  if (!bookingFormSubmitted) return;
-
-  const submitButton = bookingForm.querySelector('button[type="submit"]');
-  const successMessage = document.getElementById('form-success');
-
-  bookingForm.reset();
-
-  if (submitButton) {
-    submitButton.disabled = false;
-    submitButton.textContent = 'Submit Request';
-  }
-
-  successMessage?.classList.add('show');
-  successMessage?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-  bookingFormSubmitted = false;
-});
