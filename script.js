@@ -3,36 +3,10 @@ const nav = document.querySelector('.nav');
 navToggle?.addEventListener('click', () => nav.classList.toggle('open'));
 document.querySelectorAll('.nav a').forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
 
-const services = {
-  overnight: {
-    title: 'Overnight Pet Care',
-    text: 'In-home overnight care keeps your pet comfortable, loved, and close to their regular routine while you are away. Includes updates, companionship, potty breaks, feeding, light home care, and lots of love.'
-  },
-  constant: {
-    title: '24/7 Constant Care',
-    text: 'For pets who need extra supervision, companionship, or support. This is best for pets with anxiety, medical needs, senior care needs, or families who prefer more consistent presence.'
-  },
-  dropin: {
-    title: 'Drop-In Visits',
-    text: 'Perfect for potty breaks, meals, medications, playtime, and check-ins. Visits are personalized around your pet’s routine and comfort level.'
-  },
-  special: {
-    title: 'Special Needs Care',
-    text: 'Thoughtful support for puppies, seniors, mobility needs, anxiety, medication routines, and pets who need a little extra patience and attention.'
-  }
-};
-const serviceCards = document.querySelectorAll('.service-card');
-const serviceDetail = document.getElementById('serviceDetail');
-serviceCards.forEach(card => {
+document.querySelectorAll('.service-card').forEach(card => {
   card.addEventListener('click', () => {
-    serviceCards.forEach(c => c.classList.remove('active'));
-    card.classList.add('active');
-    const item = services[card.dataset.service];
-    serviceDetail.style.opacity = '0';
-    setTimeout(() => {
-      serviceDetail.innerHTML = `<h3>${item.title}</h3><p>${item.text}</p>`;
-      serviceDetail.style.opacity = '1';
-    }, 180);
+    const booking = document.querySelector('#booking');
+    booking?.scrollIntoView({ behavior: 'smooth' });
   });
 });
 
