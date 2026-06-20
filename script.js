@@ -32,29 +32,22 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
 
 
-const bookingForm = document.getElementById('booking-form');
-bookingForm?.addEventListener('submit', async (event) => {
-  event.preventDefault();
 
-  const formData = new FormData(bookingForm);
+hiddenFrame?.addEventListener('load', () => {
+  if (!bookingFormSubmitted) return;
 
-  try {
-    const response = await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
-    });
+  const submitButton = bookingForm.querySelector('button[type="submit"]');
+  const successMessage = document.getElementById('form-success');
 
-    if (!response.ok) {
-      throw new Error('Form submission failed');
-    }
+  bookingForm.reset();
 
-    bookingForm.reset();
-
-    const successMessage = document.getElementById('form-success');
-    successMessage?.classList.add('show');
-    successMessage?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  } catch (error) {
-    alert('Something went wrong. Please try again.');
+  if (submitButton) {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Submit Request';
   }
+
+  successMessage?.classList.add('show');
+  successMessage?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  bookingFormSubmitted = false;
 });
